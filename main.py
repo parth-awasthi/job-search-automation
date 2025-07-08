@@ -96,4 +96,10 @@ if __name__ == '__main__':
     while True:
         schedule.run_pending()
         time.sleep(30)
-
+    if os.getenv('GITHUB_ACTIONS'):
+        job_routine()
+    else
+        print('Scheduler Started')
+        while True:
+            schedule.run_pending()
+            time.sleep(30)
