@@ -1,8 +1,9 @@
 name: Daily Testing Job Search
 
 on:
+  workflow_dispatch:      # allows you to click “Run workflow” in GitHub
   schedule:
-    - cron: '0 6 * * *'  # Runs at 12:00 PM IST (06:00 UTC)
+    - cron: '0 6 * * *'   # still runs daily at 12:00 PM IST
 
 jobs:
   run-search:
